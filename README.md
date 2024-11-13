@@ -28,5 +28,5 @@ You can change various settings using the following URL query parameters:
 
 Example URL:
 ```html
-https://hosted-plugin-url/?coin=bitcoin&theme=dark&history=30d
+https://imaarov.github.io/crypto-chart-obs-plugin/crypto-chart.html?coin=bitcoin&theme=dark&range=day
 

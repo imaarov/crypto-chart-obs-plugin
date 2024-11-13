@@ -6,7 +6,7 @@ Welcome to the **crypto-chart-obs-plugin**! This plugin allows you to seamlessly
 Here are some sample images of the **crypto-chart-obs-plugin** in action:
 
 <div style="display: flex; justify-content: center; gap: 20px;">
-  <img src="assets/capsule.png" alt="Capsule Style" style="width: 100%; max-width: 300px;"/>
+  <img src="assets/capsule.png" alt="Capsule Style" style="width: 40%; max-width: 300px;"/>
   <img src="assets/cart.png" alt="Card Style" style="width: 45%; max-width: 300px;"/>
 </div>
 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Crypto Chart</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+  <style>
+    body {
+      background-color: #1e1e2e;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background-color: var(--card-bg, #2b2b3c);
+      color: var(--text-color, #ffffff);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+    }
+    .price-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.2em;
+      margin-top: 15px;
+    }
+    .price-info img {
+      width: 32px;
+      height: 32px;
+    }
+    .price-text {
+      font-weight: bold;
+      color: var(--price-color, #00cc99);
+    }
+    canvas {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <canvas id="priceChart"></canvas>
+    <div class="price-info">
+      <span id="coin-icon"><img src="" alt="Coin Icon" id="icon-img"></span>
+      <span class="price-text" id="current-price">Loading...</span>
+    </div>
+  </div>
+
+  <script src="crypto-chart.js"></script>
+</body>
+</html>
+

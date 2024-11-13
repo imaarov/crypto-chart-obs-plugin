@@ -35,6 +35,8 @@ You can change various settings using the following URL query parameters:
 - **history**: Enable or disable historical data display (`7d`, `30d`, `1y`).
 
 Example URL:
+
 https://imaarov.github.io/crypto-chart-obs-plugin/crypto-chart.html?coin=bitcoin&theme=dark&range=day&style=capsule
+
 https://imaarov.github.io/crypto-chart-obs-plugin/crypto-chart.html?coin=bitcoin&theme=dark&range=day&style=cart
 

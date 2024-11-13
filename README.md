@@ -1,6 +1,14 @@
-# 🪙 **crypto-chart-obs-plugin** 
+# 🪙 **crypto-chart-obs-plugin**
 
 Welcome to the **crypto-chart-obs-plugin**! This plugin allows you to seamlessly integrate live cryptocurrency price charts (e.g., Bitcoin, Ethereum) into your OBS stream. With customizable themes and coin options, it's perfect for any streamers, traders, or crypto enthusiasts looking to display live market data during their broadcasts.
+
+## 📸 Sample Images
+Here are some sample images of the **crypto-chart-obs-plugin** in action:
+
+<div style="display: flex; justify-content: center; gap: 20px;">
+  <img src="assets/capsule.png" alt="Capsule Style" style="width: 100%; max-width: 300px;"/>
+  <img src="assets/cart.png" alt="Card Style" style="width: 45%; max-width: 300px;"/>
+</div>
 
 ## 🚀 Features
 - **Live Crypto Price Charts**: Displays real-time price changes for various cryptocurrencies.
@@ -27,6 +35,6 @@ You can change various settings using the following URL query parameters:
 - **history**: Enable or disable historical data display (`7d`, `30d`, `1y`).
 
 Example URL:
-```html
-https://imaarov.github.io/crypto-chart-obs-plugin/crypto-chart.html?coin=bitcoin&theme=dark&range=day
+https://imaarov.github.io/crypto-chart-obs-plugin/crypto-chart.html?coin=bitcoin&theme=dark&range=day&style=capsule
+https://imaarov.github.io/crypto-chart-obs-plugin/crypto-chart.html?coin=bitcoin&theme=dark&range=day&style=cart
 

@@ -15,7 +15,9 @@
       height: 100vh;
       display: block;
       margin: 3px;
+      background-color: none;
     }
+    /* Card Style */
     .card {
       background-color: var(--card-bg, #2b2b3c);
       color: var(--text-color, #ffffff);
@@ -25,6 +27,32 @@
       max-width: 500px;
       width: 100%;
       text-align: center;
+      display: block;
+    }
+    .green {
+      background-color: #2dce89; /* Green */
+      color: #fff; /* Ensure text is white for visibility */
+    }
+
+    .red {
+      background-color: #e74c3c; /* Red */
+      color: #fff; /* Ensure text is white for visibility */
+    }
+    /* Capsule Style */
+    .capsule {
+      color: var(--text-color, #ffffff); /* Default text color for other cases */
+      background-color: var(--capsule-bg, #2b2b3c);
+      color: var(--text-color, #ffffff);
+      padding: 10px 20px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 300px;
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+      transition: all 0.5s ease-in-out;
     }
     .price-info {
       display: flex;
@@ -39,20 +67,54 @@
     }
     .price-text {
       font-weight: bold;
-      color: var(--price-color, #00cc99);
+      color: var(--price-color, #fff);
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .growth-info {
+      display: inline-block;
+      font-weight: normal;
+      margin-top: 5px;
+      font-size: 1.1em;
     }
     canvas {
       max-width: 100%;
+      display: block; /* Ensure the chart is hidden when in capsule mode */
+    }
+    .green { background-color: #2dce89; } /* Green */
+    .red { background-color: #e74c3c; } /* Red */
+    .hidden { display: none; } /* Add this class to hide elements */
+    /* Flashing effect */
+    .flash-up {
+      animation: flashUp 0.5s ease-in-out infinite;
+    }
+    .flash-down {
+      animation: flashDown 0.5s ease-in-out infinite;
+    }
+    @keyframes flashUp {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    @keyframes flashDown {
+      0% { transform: scale(1); }
+      50% { transform: scale(0.9); }
+      100% { transform: scale(1); }
     }
   </style>
 </head>
 <body>
-  <div class="card">
+  <div id="crypto-display" class="card">
     <canvas id="priceChart"></canvas>
     <div class="price-info">
       <span id="coin-icon"><img src="" alt="Coin Icon" id="icon-img"></span>
       <span class="price-text" id="current-price">Loading...</span>
     </div>
+  </div>
+  <div id="capsule-display" class="capsule hidden">
+    <span id="coin-icon-capsule"><img src="" alt="Coin Icon" id="icon-img-capsule"></span>
+    <span class="price-text" id="current-price-capsule">Loading...</span>
+    <span class="growth-info" id="growth-info-capsule"></span>
   </div>
 
   <script src="crypto-chart.js"></script>
